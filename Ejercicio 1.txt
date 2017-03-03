@@ -1,0 +1,31 @@
+Apache: Se trata de un servidor web HTTP de código abierto multiplataforma, el cual implementa el protocolo HTTP/1.1. Su funcionamiento
+se basa en una parte central (Core) y diversos módulos extras los cuales implementan una funcionalidad extra al servidor
+cada uno. Se trata de una de las opciones más populares dentro de los servidores HTTP y actualmente se encuentra mantenido por la Apache
+Software Foundation.
+
+Nginx: Se trata de un servidor web/proxy inverso con capacidades de alto rendimiento y un prox para protocolos de correo electrónico
+es código abierto y existe una versión comercial llamada Nginx plus. Se trata de uno de los servidores webs más usados debido a sus 
+características como son: Servidor de archivos estáticos, índices y autoindexados, balanceo de carga, tolerancia a fallos, soporte
+HTTP y HTTP2 sobre SSL etc.
+
+Thttpd: Se trata de un servidor web de código libre para las mayoria de variantes de Unix. Sus principales características son su velocidad,
+su seguridad y su pequeño tamaño, ya que solo incluye los requisitos mínimos para un servidor HTTP. Debido a estas características su principal
+uso es en transferencias de archivos donde se busca la máxima ganancia de velocidad a la vez que reducimos gastos en funciones que no son 
+requeridas en el servidor.
+
+Cherokee: Servidor multiplataforma, más liviano que el resto de servidores web pero igual de rápido y con una funcionalidad completa. Puede 
+usarse como sistema embedido y acepta la instalación de complementos que aumenten su funcionalidad. Soporta tecnologías como SCGI o CGI entre 
+otras, soporta configuración de servidores virtuales, tiene panel de autenticación y puede usarse como balanceador de carga.
+
+Node.js: Entorno en tiempo de ejecución multiplataforma, está basado en el lenguaje de programación ECMAScript y fue basado en el motor V8 de
+Google. Su diseño estuvo enfocado en la creación de programas de red que fuese facilmente escalables (los servidores web serían un buen ejemplo)
+Su arquitectura está orientada a eventos asíncronos con I/O de datos. 
+
+
+Bibliografia:
+
+Apache -> https://httpd.apache.org/docs/2.4/ (pagina web de apache, apartado de documentación versión 2.4)
+Nginx -> https://www.nginx.com/resources/wiki/ (Wiki específica de Nginx)
+Thttpd -> http://acme.com/software/thttpd/ (pagina de thttpd) https://es.wikipedia.org/wiki/Thttpd (entrada en la wikipedia para thttpd)
+Cherokee -> http://cherokee-project.com/doc/ (web del proyecto cherokee, apartado de documentación)
+Node.js -> https://nodejs.org/es/docs/ (web de Node.js, apartado de documentación) https://es.wikipedia.org/wiki/Node.js (entrada en la wikipedia para Node.js)
