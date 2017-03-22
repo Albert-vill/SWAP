@@ -19,6 +19,7 @@ Se ha configurado un acceso sin contraseña desde la máquina2 hasta la máquina
 `ssh-keygen -b 4096 -t rsa`
 En la figura 3.1 se puede ver la ejecución del comando:
 ![Figura 3.1](http://i.imgur.com/xkgpd9r.png "Figura 3.1")
+
 Con esto hemos generado una clave rsa la cual hemos compartido con la máquina usando con el comando:
 `ssh-copy-id 192.168.56.101` (siendo 192.168.56.101 la ip de la máquina1)
 Posteriormente realizamos un acceso a la máquina1 con el comando:
