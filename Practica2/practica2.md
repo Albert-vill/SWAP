@@ -1,5 +1,5 @@
 # Documento práctica 2 SWAP
-## Granada 21/03/2017## Alberto Villanueva Copado
+## Granada 21/03/2017 Alberto Villanueva Copado
 
 ### 1ºClonación de un archivo de una máquina a otra usando ssh
 se ha copiado el fichero archivo.txt desde la máquina2 hasta la máquina1 usando shh, para ello hemos usado el comando scp cuya sintaxis es la siguiente:
