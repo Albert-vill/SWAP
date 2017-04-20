@@ -1,13 +1,13 @@
-#Documento Práctica 3 SWAP
-##Granada a 20/04/2017 Alberto Villanueva Copado
+# Documento Práctica 3 SWAP
+## Granada a 20/04/2017 Alberto Villanueva Copado
 
-###1º-Instalación Nginx y haproxy en Ubuntu
+### 1º-Instalación Nginx y haproxy en Ubuntu
 Para la instalación de Nginx en ubuntu necesitamos ejecutar el comando:
 `sudo apt-get install Nginx`
 Posteriormente instalaremos haproxy usando el comando:
 `sudo apt-get install haproxy`
 
-###2º-Configuración de Nginx y haproxy
+### 2º-Configuración de Nginx y haproxy
 La configuración por defecto de ambos balanceadores no nos interesa, por lo que debemos modificarla de la siguiente manera:
 Para  Nginx modificaremos el fichero  `/etc/nginx/conf.d/default.conf` añadiendo lo siguiente:
 
@@ -49,7 +49,7 @@ backend servers
 server m1 192.168.56.101:80 maxconn 32
 server m2 192.168.56.102:80 maxconn 32
 
-###3ºActivar los balanceadores y realizar curl
+### 3ºActivar los balanceadores y realizar curl
 Lo primero es comprobar si los balanceadores han sido configurados correctamente, para ello intentamos lanzarlos con el comando `sudo service nginx/haproxy start` si se inician sin problemas es que hemos realizado la configuración correctamente, como podemos ver en la figura 3.1 3.2:
 
 ![Figura 3.1](http://i.imgur.com/CJwKH3U.png "Figura 3.1")
