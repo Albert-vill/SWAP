@@ -11,7 +11,7 @@ Posteriormente instalaremos haproxy usando el comando:
 La configuración por defecto de ambos balanceadores no nos interesa, por lo que debemos modificarla de la siguiente manera:
 Para  Nginx modificaremos el fichero  `/etc/nginx/conf.d/default.conf` añadiendo lo siguiente:
 
-upstream apaches {
+`upstream apaches {
  server 192.168.56.101;
  server 192.168.56.102;
 }
@@ -30,11 +30,11 @@ location /
  proxy_http_version 1.1;
  proxy_set_header Connection "";
  }
-}
+}`
 
 En el caso de haproxy modificaremos el fichero en la ruta: `/etc/haproxy/ifconfig/haproxy.cfg` y añadimos lo siguiente:
 
-global
+`global
 daemon
 maxconn 256
 defaults
@@ -47,7 +47,7 @@ bind *:80
 default_backend servers
 backend servers
 server m1 192.168.56.101:80 maxconn 32
-server m2 192.168.56.102:80 maxconn 32
+server m2 192.168.56.102:80 maxconn 32`
 
 ### 3ºActivar los balanceadores y realizar curl
 Lo primero es comprobar si los balanceadores han sido configurados correctamente, para ello intentamos lanzarlos con el comando `sudo service nginx/haproxy start` si se inician sin problemas es que hemos realizado la configuración correctamente, como podemos ver en la figura 3.1 3.2:
