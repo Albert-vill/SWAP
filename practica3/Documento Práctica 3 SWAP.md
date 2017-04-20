@@ -53,7 +53,7 @@ server m2 192.168.56.102:80 maxconn 32`
 Lo primero es comprobar si los balanceadores han sido configurados correctamente, para ello intentamos lanzarlos con el comando `sudo service nginx/haproxy start` si se inician sin problemas es que hemos realizado la configuración correctamente, como podemos ver en la figura 3.1 3.2:
 
 ![Figura 3.1](http://i.imgur.com/CJwKH3U.png "Figura 3.1")
-![Figura 3.2](http://i.imgur.com/csON5k9.png) "Figura 3.2")
+![Figura 3.2](http://i.imgur.com/csON5k9.png "Figura 3.2")
 
 Una vez comprobado que ambos servicios funcionan, pasamos a realizar un curl desde la máquina anfitrion (windows 10 en este caso) a la máquina balanceadora, para ello accedemos a la terminal de windows y usamos el comando :
 `curl ip_maquina_balanceadora`
