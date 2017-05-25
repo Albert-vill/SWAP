@@ -5,19 +5,19 @@
 ### 1º-Generación base de datos
 
 El objetivo de la práctica es la creación de una estructura maestro-esclavo entre las bases de datos de dos servidores web diferentes. Para ello lo primero que tenemos que hacer es generar la base de datos en el servidor maestro:
-1.Accedemos a mysql en el servidor maestro
+1. Accedemos a mysql en el servidor maestro
 `mysql -u root -p`
-2.Creamos una base de datos
+2. Creamos una base de datos
 `CREATE DATABASE 'contactos';`
-3.Accedemos a ella
+3. Accedemos a ella
 `USE contactos;`
-4.Creamos una tabla en la base de datos
+4. Creamos una tabla en la base de datos
 `CREATE TABLE datos (nombre varchar(100),tlf int);`
-5.Introducimos datos en la tabla
+5. Introducimos datos en la tabla
 `INSERT INTO datos (nombre, tlf) values ("paco", 65142878);`
-6.Mostramos el resultado final de la table
+6. Mostramos el resultado final de la table
 `SELECT *. FROM DATOS;`
-7.Mostramos las tablas de la base de datos
+7. Mostramos las tablas de la base de datos
 `SHOW TABLES;`
 
 En la figura 1.1 y 1.2 pueden verse la salida de los comandos del paso 6 y 7 respectivamente.
