@@ -5,11 +5,18 @@ Cuando se realizó este documento no se podía acceder a las maquinas virtuales 
 
 ### 1º-Instalación Certificado SSl autofirmado
 Lo primero es activar el módulo SSl de Apache, generar los certificados y especificarles la ruta donde se almacenarán:
+
 `a2enmod ssl`
+
+
 `service apache2 restart`
+
 `mkdir /etc/apache2/ssl`
+
 `openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout`
+
 `/etc/apache2/ssl/apache.key -out /etc/apache2/ssl/apache.crt`
+
 Cuando introduzcamos estos comandos, deberemos rellenar los campos de información sobre el certificado. Una vez rellenado accedemos al documento de configuración de default-ssl y añadimos 
 
 `SSLCertificateFile /etc/apache2/ssl/apache.crt`
