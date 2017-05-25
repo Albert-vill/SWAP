@@ -20,6 +20,7 @@ Lo primero es activar el módulo SSl de Apache, generar los certificados y espec
 Cuando introduzcamos estos comandos, deberemos rellenar los campos de información sobre el certificado. Una vez rellenado accedemos al documento de configuración de default-ssl y añadimos 
 
 `SSLCertificateFile /etc/apache2/ssl/apache.crt`
+
 `SSLCertificateKeyFile /etc/apache2/ssl/apache.key`
 
 ### 2º-Configuración del cortafuegos e iptables
