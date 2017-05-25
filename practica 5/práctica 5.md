@@ -2,8 +2,9 @@
 ##Granada a 20/04/2017 Alberto Villanueva Copado
 
 
-###1º-Generación base de datos
-El obejtivo de la práctica es la creación de una estructura maestro-esclavo entre las bases de datos de dos servidores web diferentes. Para ello lo primero que tenemos que hacer es generar la base de datos en el servidor maestro:
+### 1º-Generación base de datos
+
+El objetivo de la práctica es la creación de una estructura maestro-esclavo entre las bases de datos de dos servidores web diferentes. Para ello lo primero que tenemos que hacer es generar la base de datos en el servidor maestro:
 1.Accedemos a mysql en el servidor maestro
 `mysql -u root -p`
 2.Creamos una base de datos
@@ -33,7 +34,8 @@ Una vez tenemos el fichero sql en la máquina maestra y la bd creada en la máqu
 Sin olvidarnos de desbloquear las tablas de la bd desde el servidor maestro
 `UNLOCK TABLES`
 
-###2º-Configuración de mysql
+### 2º-Configuración de mysql
+
 Llegados a este punto es momento de modificar los ficheros de configuración de mysql para establecer la estructura maestro esclavo. Primero debemos acceder al fichero 
 `/etc/mysql/mysql.conf.d/mysqld.cnf`
 Allí realizaremos los siguientes cambios:
