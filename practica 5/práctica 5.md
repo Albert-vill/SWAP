@@ -42,6 +42,7 @@ Allí realizaremos los siguientes cambios:
 1. Comentar la linea de bind-address
 2. Descomentar la linea de server-id darle valor = 1 
 3. Descomentar log_bin
+
 Guardamos el resultado del fichero y recargamos el servicio usando
 `service mysql restart`
 Debemos repetir este proceso en la máquina esclavo pero dandole valor = 2 a server-id. Una vez hecho esto y si no hemos obtenido ningún error proseguimos con la configuración dinámica desde mysql.
