@@ -28,9 +28,9 @@ En la figura 1.1 y 1.2 pueden verse la salida de los comandos del paso 6 y 7 res
 Una vez tenemos la base de datos creada en el servidor maestro vamos a bloquear las tablas de forma que no se produzca ningún acceso a la bd:
 `FLUSH TABLES WITH READ LOCK;`
 Salimos de mysql y pasaremos a volcarla en el servidor esclavo, para ello usaremos la orden mysqldump, recordando que mysqldump contiene los comandos para recrear el estado de una bd, pero no la creación de la bd en si misma, por lo que necesitamos tenerla creada previamente en el servidor esclavo. Para ello repetimos el paso 3 y volvemos a la máquina maestro para volcar la bd en un archivo sql, para ello usamos:
-`mysqldump contactos -u root -p > /root/contactos.sql`
+`mysqldump contactos -u root -p > /tmp/contactos.sql`
 Una vez tenemos el fichero sql en la máquina maestra y la bd creada en la máquina esclavo vamos a copiar el fichero sql en la máquina esclavo:
-`scp 192.168.30.128:/tmp/ejemplodb.sql /tmp/`
+`scp 192.168.30.128:/tmp/contactos.sql /tmp/`
 Sin olvidarnos de desbloquear las tablas de la bd desde el servidor maestro
 `UNLOCK TABLES`
 
@@ -39,9 +39,9 @@ Sin olvidarnos de desbloquear las tablas de la bd desde el servidor maestro
 Llegados a este punto es momento de modificar los ficheros de configuración de mysql para establecer la estructura maestro esclavo. Primero debemos acceder al fichero 
 `/etc/mysql/mysql.conf.d/mysqld.cnf`
 Allí realizaremos los siguientes cambios:
-1.Comentar la linea de bind-address
-2.Descomentar la linea de server-id darle valor = 1 
-3.Descomentar log_bin
+1. Comentar la linea de bind-address
+2. Descomentar la linea de server-id darle valor = 1 
+3. Descomentar log_bin
 Guardamos el resultado del fichero y recargamos el servicio usando
 `service mysql restart`
 Debemos repetir este proceso en la máquina esclavo pero dandole valor = 2 a server-id. Una vez hecho esto y si no hemos obtenido ningún error proseguimos con la configuración dinámica desde mysql.
